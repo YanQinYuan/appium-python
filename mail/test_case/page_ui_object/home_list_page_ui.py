@@ -10,7 +10,7 @@ class HomeListPageUI(Base):
     def gesture_item_loc(self):
         """
         定位到"Gesture"列表项
-        :return: WebDriver对象
+        :return: webdriver对象
         """
         return self.selector({
             'ios_by': 'name',

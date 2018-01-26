@@ -10,7 +10,7 @@ class Base(object):
     def __init__(self, driver):
         """
         初始化构造器
-        :param driver: WebDriver对象
+        :param driver: webdriver对象
         """
         self.driver = driver
         self.platform = platform
@@ -24,7 +24,7 @@ class Base(object):
             'android_by': 'android_by',
             'android_value': 'android_value',
         }
-        :return: WebDriver对象
+        :return: webdriver对象
         """
         by = None
         value = None
@@ -51,6 +51,8 @@ class Base(object):
             return self.wait_name(value)
         elif by == 'class_name':
             return self.class_name(value)
+        elif by == 'accessibility_id'
+            return self.accessibility_id(value)
         else:
             pass
 
@@ -60,7 +62,7 @@ class Base(object):
         :param xpath: 元素的XMLPath
         :return: WebElement对象
         """
-        return self.driver.element_by_xpath(xpath)
+        return self.driver.find_element_by_xpath(xpath)
 
     def id(self, _id):
         """
@@ -68,7 +70,7 @@ class Base(object):
         :param _id: 元素的ID
         :return: WebElement对象
         """
-        return self.driver.element_by_id(_id)
+        return self.find_driver.element_by_id(_id)
 
     def wait_id(self, _id):
         """
@@ -84,7 +86,7 @@ class Base(object):
         :param name: 元素的文本
         :return: WebElement对象
         """
-        return self.driver.element_by_name(name)
+        return self.driver.find_element_by_name(name)
 
     def wait_name(self, name):
         """
@@ -100,4 +102,5 @@ class Base(object):
         :param class_name: ['class_name', index]
         :return: WebElement对象
         """
-        return self.driver.elements_by_class_name(class_name[0])[class_name[1]]
+        return self.driver.find_elements_by_class_name(class_name)
+    def accessibility_id(self, accessibility_id)

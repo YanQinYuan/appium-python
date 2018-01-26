@@ -1,11 +1,13 @@
 # -*- coding:utf-8 -*-
-
-
+import os
+PATH = lambda p: os.path.abspath(
+    os.path.join(os.path.dirname(__file__), p)
+)
 # 项目绝对路径
-global_path = '/Users/hekaiyou/PycharmProjects/po-sample-python/'
+global_path = 'D:/istl/po-sample-python'
 
 # 服务器URL
-server_url = 'http://localhost:3456/wd/hub'
+server_url = 'http://localhost:4723/wd/hub'
 
 # 配置iOS的参数
 ios_capabilities = {
@@ -16,8 +18,12 @@ ios_capabilities = {
 
 # 配置Android的参数
 android_capabilities = {
+    'platformName': '5.1.1',
     'platformName': 'android',
-    'app': 'android_app_bootstrap-debug.apk',
+    'deviceName': '192.168.58.101:5555',
+    'app': PATH(
+            'D:/istl/android-debug.apk'
+        )
 }
 
 # 测试平台（android/ios）
