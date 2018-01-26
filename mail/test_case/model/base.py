@@ -103,4 +103,10 @@ class Base(object):
         :return: WebElement对象
         """
         return self.driver.find_elements_by_class_name(class_name)
-    def accessibility_id(self, accessibility_id)
+    def accessibility_id(self, accessibility_id):
+        """
+        通过[con-dec]查找元素
+        :param accessibility_id即con-dec
+        :return: WebElement对象
+        """
+        return self.driver.find_element_by_accessibility_id(accessibility_id)

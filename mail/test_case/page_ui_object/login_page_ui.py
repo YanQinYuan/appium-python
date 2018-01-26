@@ -10,7 +10,7 @@ class LoginPageUI(Base):
     def username_input_loc(self):
         """
         定位到登录用户名输入框
-        :return: WebDriver对象
+        :return: webdriver对象
         """
         return self.selector({
             'ios_by': 'xpath',
@@ -25,8 +25,8 @@ class LoginPageUI(Base):
         :return: WebDriver对象
         """
         return self.selector({
-            'ios_by': 'xpath',
-            'ios_value': '//XCUIElementTypeSecureTextField[1]',
+            'ios_by': '',
+            'ios_value': '',
             'android_by': 'class_name',
             'android_value': ['android.widget.EditText', 1],
         })
@@ -37,6 +37,6 @@ class LoginPageUI(Base):
         :return: WebDriver对象
         """
         return self.selector({
-            'by': 'name',
-            'value': 'Login',
+            'by': 'class_name',
+            'value': 'android.widget.Button',
         })

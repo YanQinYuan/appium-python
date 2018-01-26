@@ -15,13 +15,13 @@ from personal_page import PersonalPage
 
 
 class MacacaTest(appunit.AppTest):
-    """Macaca示例App测试"""
-    def test_01_login(self):
+    """tech_login"""
+    def test_tech_login(self):
         """登录"""
         login_po = LoginPage(self.driver)
-        login_po.username_input('中文+Test+12345678')
-        login_po.password_input('111111')
-        sleep(2)
+        login_po.username_input('h01')
+        login_po.password_input('Hlf001')
+        sleep(1)
         login_po.login_button()
 
     def test_02_scroll_tableview(self):
