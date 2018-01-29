@@ -14,23 +14,23 @@ from web_page import WebPage
 from personal_page import PersonalPage
 
 
-class MacacaTest(appunit.AppTest):
+class AppiumTest(appunit.AppTest):
     """tech_login"""
     def test_tech_login(self):
-        """登录"""
+        """学生登录"""
         login_po = LoginPage(self.driver)
         login_po.username_input('h01')
         login_po.password_input('Hlf001')
         sleep(1)
         login_po.login_button()
 
-    def test_02_scroll_tableview(self):
-        """滚动表视图"""
+    def test_tech_index(self):
+        """学生做作业"""
         home_po = HomePage(self.driver)
         home_po.home_button()
         home_po.list_button()
 
-    def test_03_gesture(self):
+    def test_tech_(self):
         """手势"""
         home_list_po = HomeListPage(self.driver)
         sleep(2)
@@ -78,7 +78,7 @@ class MacacaTest(appunit.AppTest):
         sleep(3)
         insert_img(self.driver, 'baidu')
         switch_to_webview(self.driver)
-        web_po.search_input('macaca')
+        web_po.search_input('appium')
         sleep(3)
         web_po.search_button()
 

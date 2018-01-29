@@ -2,7 +2,7 @@
 
 from base import Base
 
-
+# 包含 ios 和 Android 两种定位
 class LoginPageUI(Base):
     """
     页面UI对象(PUO): 登录页面UI
